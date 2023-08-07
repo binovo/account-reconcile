@@ -3,6 +3,7 @@ odoo.define('account_reconcile_partial.ReconciliationRenderer', function (requir
 
     var field_utils = require('web.field_utils');
     var renderer = require('account.ReconciliationRenderer')
+    var translation = require("web.translation");
 
     renderer.LineRenderer.include({
         events: _.extend({}, renderer.LineRenderer.prototype.events, {
@@ -44,6 +45,31 @@ odoo.define('account_reconcile_partial.ReconciliationRenderer', function (requir
                 {'data': {mvLineId: moveLineId, 'amount': $line.val()}}
             );
         },
+        _l10n_decimal_point: function () {
+            return this.formatType === "float_time"
+                ? ":" : translation._t.database.parameters.decimal_point;
+        },
+        _replaceAt: function (cur_val, from, to, replacement) {
+            return cur_val.substring(0, from) + replacement +
+                   cur_val.substring(to);
+        },
+        _changeDecimalPoint: function (event) {
+            if (event.keyCode !== 110) {
+                return;
+            }
+            event.preventDefault();
+            var input = $(event.target)[0]
+            var from = input.selectionStart - 1,
+                to = input.selectionEnd,
+                cur_val = input.value,
+                point = this._l10n_decimal_point();
+            var new_val = this._replaceAt(cur_val, from, to, point);
+            input.value = new_val;
+            // Put user caret in place
+            to = from + point.length;
+            input.selectionStart = to
+            input.selectionEnd = to;
+        },
         _onInputKeyup: function (event) {
             if(event.keyCode === 13) {
                 if ($(event.target).hasClass('edit_amount_input')) {
@@ -53,7 +79,7 @@ odoo.define('account_reconcile_partial.ReconciliationRenderer', function (requir
             }
             if ($(event.target).hasClass('edit_amount_input')) {
                 if (event.type === 'keyup') {
-                    return;
+                    return this._changeDecimalPoint(event);
                 }
                 else {
                     return this._editAmount(event);
