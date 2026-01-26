@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_statement_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-21 12:46+0000\n"
+"PO-Revision-Date: 2025-11-21 12:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.view_bank_statement_form
+msgid "<span class=\"o_stat_text\">Journal Items</span>"
+msgstr "<span class=\"o_stat_text\">Egunkari-elementuak</span>"
+
+#. module: account_statement_base
+#: model:ir.model,name:account_statement_base.model_account_bank_statement
+#: model_terms:ir.ui.view,arch_db:account_statement_base.view_bank_statement_form
+msgid "Bank Statement"
+msgstr "Banku-laburpena"
+
+#. module: account_statement_base
+#: model:ir.model,name:account_statement_base.model_account_bank_statement_line
+msgid "Bank Statement Line"
+msgstr "Banku-laburpeneko lerroa"
+
+#. module: account_statement_base
+#: model:ir.actions.act_window,name:account_statement_base.account_bank_statement_line_action
+msgid "Bank Statement Lines"
+msgstr "Banku-laburpeneko lerroak"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Date"
+msgstr "Data"
+
+#. module: account_statement_base
+#: model:ir.model,name:account_statement_base.model_account_journal
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Journal"
+msgstr "Egunkaria"
+
+#. module: account_statement_base
+#. odoo-python
+#: code:addons/account_statement_base/models/account_bank_statement.py:0
+#, python-format
+msgid "Journal Items"
+msgstr "Egunkari-elementuak"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Label, Ref, Notes or Amount"
+msgstr "Etiketa, erref., oharrak edo zenbatekoa"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Not Reconciled"
+msgstr "Kontziliatu gabea"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_form
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_tree
+msgid "Notes"
+msgstr "Oharrak"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_tree
+msgid "Open Journal Entry"
+msgstr "Ireki egunkariko sarrera"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.view_bank_statement_tree
+msgid "Open Statement Lines"
+msgstr "Ireki laburpeneko lerroak"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Partner"
+msgstr "Bazkidea"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Reconciled"
+msgstr "Kontziliatuta"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_tree
+msgid "Revert reconciliation"
+msgstr "Leheneratu kontziliazioa"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_form
+msgid "Technical Information"
+msgstr "Informazio teknikoa"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "To check"
+msgstr "Egiaztatzeko"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.account_bank_statement_line_search
+msgid "Transaction Type"
+msgstr "Transakzio-mota"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.view_bank_statement_form
+msgid "Transactions"
+msgstr "Transakzioak"
+
+#. module: account_statement_base
+#: model_terms:ir.ui.view,arch_db:account_statement_base.view_bank_statement_form
+msgid "e.g. BNK/2021/0001"
+msgstr "adibidez: BNK/2021/0001"
